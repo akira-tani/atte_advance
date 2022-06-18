@@ -1,0 +1,53 @@
+.register-container {
+  text-align: center;
+  padding: 50px 0 70px;
+}
+
+.register-title {
+  font-size: 18px;
+  margin-bottom: 30px;;
+}
+
+input {
+  display: block;
+  padding: 10px;
+  margin: 30px auto;
+  height: 45px;
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: blue;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.register-text {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.regster-form-box {
+  margin: auto;
+  width: 25%;
+}
+
+li {
+  color: red;
+  text-align: left;
+  margin: 5px 0;
+  list-style-position: inside;
+}
