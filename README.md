@@ -73,6 +73,11 @@
   + 日付別勤怠情報の表示
 
 ## 9.DB設計
+### ER図
+![er](https://user-images.githubusercontent.com/96828647/174491845-6d5a7ff3-fc19-4884-a5dc-5bc4d0397972.png)
+
+### テーブル設計
+![table](https://user-images.githubusercontent.com/96828647/174491848-deb58469-56df-4c75-8de3-eee863537bce.png)
 
 ## 10.インフラ構成図
 
