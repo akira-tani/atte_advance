@@ -52,10 +52,15 @@
 
 ## 6.使用技術、バージョン
 * フロントエンド
-  + HTML / CSS
+  + HTML / CSS / MDBootstrap
 * バックエンド
-  + 
+  + PHP 7.4.27
+  + Laravel Framework 8.83.12
 * インフラ、その他
+  + MySQL 10.4.22-MariaDB
+  + Visual Studio Code
+  + draw.io
+
 ## 7.環境構築手順
 
 ## 8.機能一覧
