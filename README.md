@@ -37,7 +37,18 @@
 * ユーザー毎、日付毎の勤務時間の表示  
 
 ## 5.使用画面のイメージ
-
+### ユーザー登録画面
+|![localhost_8000_register](https://user-images.githubusercontent.com/96828647/174489283-159afd54-a755-412b-91ae-f99940a6b3cf.png)|
+| ---- |
+### ログイン画面
+|![localhost_8000_login](https://user-images.githubusercontent.com/96828647/174489291-c429b596-0b74-40b8-8c03-99e52010c1e0.png)|
+| ---- |
+### 勤務・休憩時刻打刻画面
+|![localhost_8000_](https://user-images.githubusercontent.com/96828647/174489302-3b0376a8-2d79-4e68-adf5-287683bd4eb1.png)|
+| ---- |
+### 日付別勤務時間表示画面
+|![localhost_8000_attendance](https://user-images.githubusercontent.com/96828647/174489308-139d2b0c-25ec-44ca-9ab3-ba34f0d70259.png)|
+| ---- |
 
 ## 6.使用技術、バージョン
 
