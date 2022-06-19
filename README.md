@@ -79,6 +79,9 @@
 ### テーブル設計
 ![table](https://user-images.githubusercontent.com/96828647/174491848-deb58469-56df-4c75-8de3-eee863537bce.png)
 
-## 10.インフラ構成図
+### 基本設計 
+![basic_design1](https://user-images.githubusercontent.com/96828647/174492259-ece77ee8-d788-4225-bf31-a1e9ecae14a3.png)
+![basic_design2](https://user-images.githubusercontent.com/96828647/174492266-a70b55e6-3448-42a6-aa27-8cc6614112a0.png)
+![basic_design3](https://user-images.githubusercontent.com/96828647/174492269-c2c9aaeb-253a-4d9c-8ecc-f48a4df1955f.png)
 
-## 11.備考
+## 10.インフラ構成図
