@@ -52,7 +52,7 @@
 
 ## 6.使用技術、バージョン
 * フロントエンド
-  + HTML / CSS / MDBootstrap
+  + HTML / CSS
 * バックエンド
   + PHP 7.4.27
   + Laravel Framework 8.83.12
