@@ -1,69 +1,86 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Atte 勤怠管理システム
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 目次
+|  番号  |  項目  |
+| :----: | :--- |
+| 1 | [URL](#1url) |
+| 2 | [概要](#2概要)|
+| 3 | [製作背景](#3製作背景) |
+| 4 | [目的](#4目的) |
+| 5 | [使用画面のイメージ](#5使用画面のイメージ) |
+| 6 | [使用技術、バージョン](#6使用技術バージョン) |
+| 7 | [環境構築手順](#7環境構築手順) |
+| 8 | [機能一覧](#8機能一覧) |
+| 9 | [DB設計](#9db設計) |
+| 10 | [インフラ構成図](#10インフラ構成図) |
 
-## About Laravel
+## 1.URL
+* Herokuデプロイ_URL：
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 2.概要
+出勤・退勤時刻の記録、休憩時間の記録、毎日の勤務時間の記録を行い、勤怠管理業務を支援するためのシステムです。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 3.製作背景
+※以下は記載例であり、スクールの模擬案件として本システムを作成しました。  
+  
+市販されている勤怠管理システムの導入にあたり、以下のような課題に直面しました。  
+* 勤怠管理システムの導入コストが高い  
+* 求めていない機能が多く、ユーザビリティが低い  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+そこで、勤怠管理システムの導入コストを抑え、かつ、最低限の機能に特化することでユーザビリティを優先した勤怠管理システムを作成しました。
 
-## Learning Laravel
+## 4.目的
+主な目的は以下を行うことで勤怠管理業務を支援することです。  
+* 出勤・退勤時刻の記録  
+* 休憩時間の記録  
+* ユーザー毎、日付毎の勤務時間の表示  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 5.使用画面のイメージ
+### ユーザー登録画面
+|![localhost_8000_register](https://user-images.githubusercontent.com/96828647/174489283-159afd54-a755-412b-91ae-f99940a6b3cf.png)|
+| ---- |
+### ログイン画面
+|![localhost_8000_login](https://user-images.githubusercontent.com/96828647/174489291-c429b596-0b74-40b8-8c03-99e52010c1e0.png)|
+| ---- |
+### 勤務・休憩時刻打刻画面
+|![localhost_8000_](https://user-images.githubusercontent.com/96828647/174489302-3b0376a8-2d79-4e68-adf5-287683bd4eb1.png)|
+| ---- |
+### 日付別勤務時間表示画面
+|![localhost_8000_attendance](https://user-images.githubusercontent.com/96828647/174489308-139d2b0c-25ec-44ca-9ab3-ba34f0d70259.png)|
+| ---- |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 6.使用技術、バージョン
+* フロントエンド
+  + HTML / CSS
+* バックエンド
+  + PHP 7.4.27
+  + Laravel Framework 8.83.12
+* インフラ、その他
+  + MySQL 10.4.22-MariaDB
+  + Visual Studio Code
+  + draw.io
 
-## Laravel Sponsors
+## 7.環境構築手順
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 8.機能一覧
+* ユーザー関連
+  + 会員登録 / ログイン / ログアウト
+* 勤怠打刻関連
+  + 勤務開始・終了の打刻
+  + 休憩開始・終了の打刻
+* 勤怠情報取得関連
+  + 日付別勤怠情報の表示
 
-### Premium Partners
+## 9.DB設計
+### ER図
+![er](https://user-images.githubusercontent.com/96828647/174491845-6d5a7ff3-fc19-4884-a5dc-5bc4d0397972.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### テーブル設計
+![table](https://user-images.githubusercontent.com/96828647/174491848-deb58469-56df-4c75-8de3-eee863537bce.png)
 
-## Contributing
+### 基本設計 
+![basic_design1](https://user-images.githubusercontent.com/96828647/174492259-ece77ee8-d788-4225-bf31-a1e9ecae14a3.png)
+![basic_design2](https://user-images.githubusercontent.com/96828647/174492266-a70b55e6-3448-42a6-aa27-8cc6614112a0.png)
+![basic_design3](https://user-images.githubusercontent.com/96828647/174492269-c2c9aaeb-253a-4d9c-8ecc-f48a4df1955f.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# atte_advance
-
->>>>>>> 0204b55cc5b9e6e88939fcf91a347063778bc587
+## 10.インフラ構成図
