@@ -32,8 +32,13 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        return redirect("/");
+        return redirect("/login");
+    }
+    public function index()
+    {
+        $users = User::orderBy('id')->paginate(5);
+        return view('user', compact('users'));
     }
 }

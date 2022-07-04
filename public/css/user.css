@@ -1,28 +1,25 @@
-.attendance-container {
+.user-container {
   text-align: center;
-  padding: 30px 100px;
+  padding: 30px 200px;
 }
 
-.attendance-date {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+.user-outer {
+  margin-bottom: 40px;
 }
 
-.attendance-date-title {
+.user-title {
   font-size: 20px;
   margin: 20px;
 }
 
-.date-button {
-  margin: auto 0;
-}
-
-.date-button button {
-  background-color: white;
-  color:rgb(0, 30, 255);
-  border:solid 1px rgb(0, 30, 255);
-  font-size: 20px;
+.user-btn {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
 }
 
 table {
@@ -33,7 +30,7 @@ table {
 
 th,
 td {
-  padding: 25px 40px;
+  padding: 20px 30px;
   word-break: break-all;
   border-top: 1px solid #000;
 }

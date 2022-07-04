@@ -16,6 +16,9 @@
         <a href="/">ホーム</a>
       </li>
       <li class="header-nav-item">
+        <a href="/user">ユーザー情報</a>
+      </li>
+      <li class="header-nav-item">
         <a href="/attendance">日付一覧</a>
       </li>
       <li class="header-nav-item">
