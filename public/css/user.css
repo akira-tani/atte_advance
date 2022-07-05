@@ -1,0 +1,66 @@
+.user-container {
+  text-align: center;
+  padding: 30px 200px;
+}
+
+.user-outer {
+  margin-bottom: 40px;
+}
+
+.user-title {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.user-btn {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 20px 30px;
+  word-break: break-all;
+  border-top: 1px solid #000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination li {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.pagination li a {
+  text-decoration: none;
+  color: rgb(0, 150, 255);
+}
+
+.pagination .active {
+  background-color: rgb(0, 150, 255);
+  border: 1px solid rgb(0, 150, 255);
+  color: white;
+}
+
+.pagination li:hover:not(.active, .disabled) {
+  background-color: #ddd;
+}

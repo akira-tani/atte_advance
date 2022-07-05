@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+
+header {
+  font-size: 24px;
+  margin: 0 30px;
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background-color: rgb(243, 243, 243);
+  height: 85%;
+}
+
+footer {
+  font-size: 12px;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
