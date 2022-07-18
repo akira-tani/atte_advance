@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+.idea
+.vscode
+.env
+=======
 /node_modules
 /public/hot
 /public/storage
@@ -13,3 +18,4 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+>>>>>>> origin/main
