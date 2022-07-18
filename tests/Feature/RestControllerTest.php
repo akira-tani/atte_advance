@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\WorkTime;
 use App\Models\RestTime;
 use Auth;
+use Carbon\Carbon;
 
 class RestControllerTest extends TestCase
 {
@@ -16,49 +17,44 @@ class RestControllerTest extends TestCase
 
     public function testStart()
     {
+        $today = Carbon::today()->format('Y-m-d');
         $user = User::factory()->create();
-        WorkTime::factory()->create([
+        $work_time = WorkTime::factory()->create([
             'user_id' => $user->id,
+            'date' => $today,
         ]);
-        $work_time = WorkTime::where('user_id', $user->id)->where('date', '2022-06-19')->first();
 
-        $response = $this->actingAs($user)->get('/');
-        $response->assertStatus(200);
+        $rest_time = RestTime::where('work_time_id', $work_time->id)->first();
 
-        $response = $this->actingAs($user)->post('/rest-start');
+        $this->assertNull($rest_time);
+
+        $response = $this->actingAs($user)->post('rest-start');
         $response->assertRedirect('/');
 
-        RestTime::factory()->create([
-            'work_time_id' => $work_time->id,
-        ]);
-        $this->assertDatabaseHas('rest_times',[
-            'work_time_id' => $work_time->id,
-            'rest_start'=>'14:53:55',
-        ]);
+        $rest_time = RestTime::where('work_time_id', $work_time->id)->first();
+
+        $this->assertSame($work_time->id, $rest_time->work_time_id);
+        $this->assertNotNull($work_time->work_start);
     }
     public function testEnd()
     {
+        $today = Carbon::today()->format('Y-m-d');
         $user = User::factory()->create();
-        WorkTime::factory()->create([
+        $work_time = WorkTime::factory()->create([
             'user_id' => $user->id,
-        ]);
-        $work_time = WorkTime::where('user_id', $user->id)->where('date', '2022-06-19')->first();
-
-        $response = $this->actingAs($user)->get('/');
-        $response->assertStatus(200);
-
-        $response = $this->actingAs($user)->post('/rest-end');
-        $response->assertRedirect('/');
-
-        RestTime::factory()->create([
-            'work_time_id' => $work_time->id,
+            'date' => $today,
         ]);
 
-        RestTime::where('work_time_id', $work_time->id)->latest()->first()->update([
-            'rest_end' => '14:53:55',
-        ]);
-        $this->assertDatabaseHas('rest_times', [
-            'rest_end' => '14:53:55',
-        ]);
+        $response = $this->actingAs($user)->post('rest-start');
+        
+        $rest_time = RestTime::where('work_time_id', $work_time->id)->first();
+
+        $this->assertNull($rest_time->rest_end);
+
+        $response = $this->actingAs($user)->post('rest-end');
+        
+        $rest_time = RestTime::where('work_time_id', $work_time->id)->first();
+
+        $this->assertNotNull($rest_time->rest_end);
     }
 }

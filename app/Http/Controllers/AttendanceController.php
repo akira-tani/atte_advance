@@ -44,8 +44,9 @@ class AttendanceController extends Controller
     }
     public function getUser(Request $request)
     {
-        $name = User::find($request->id)->name;
-        $work_times = WorkTime::where('user_id', $request->id)->orderBy('date')->paginate(5);
+        $user_id = Auth::id();
+        $name = Auth::user()->name;
+        $work_times = WorkTime::where('user_id', $user_id)->orderBy('date')->paginate(5);
         return view('user_attendance', compact('name', 'work_times'));
     }
 }

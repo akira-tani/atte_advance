@@ -8,6 +8,7 @@ use Tests\TestCase;
 use App\Models\User;
 use App\Models\WorkTime;
 use Auth;
+use Carbon\Carbon;
 
 class WorkControllerTest extends TestCase
 {
@@ -15,44 +16,35 @@ class WorkControllerTest extends TestCase
 
     public function testStart()
     {
+        $today = Carbon::today()->format('Y-m-d');
         $user = User::factory()->create();
+        $work_time = WorkTime::where('user_id', $user->id)->first();
 
-        $response = $this->actingAs($user)->get('/');
-        $response->assertStatus(200);
+        $this->assertNull($work_time);
 
         $response = $this->actingAs($user)->post('/work-start');
         $response->assertRedirect('/');
 
-        WorkTime::factory()->create([
-            'user_id' => $user->id,
-        ]);
+        $work_time = WorkTime::where('user_id', $user->id)->first();
 
-        $this->assertDatabaseHas('work_times',[
-            'user_id' => $user->id,
-            'date'=>'2022-06-19',
-            'work_start'=>'14:53:55',
-        ]);
+        $this->assertSame($user->id, $work_time->user_id);
+        $this->assertSame($today, $work_time->date);
+        $this->assertNotNull($work_time->work_start);
     }
 
     public function testEnd()
     {
         $user = User::factory()->create();
+        $response = $this->actingAs($user)->post('work-start');
+        $work_time = WorkTime::where('user_id', $user->id)->first();
 
-        $response = $this->actingAs($user)->get('/');
-        $response->assertStatus(200);
+        $this->assertNull($work_time->work_end);
 
         $response = $this->actingAs($user)->post('/work-end');
         $response->assertRedirect('/');
 
-        WorkTime::factory()->create([
-            'user_id' => $user->id,
-        ]);
+        $work_time = WorkTime::where('user_id', $user->id)->first();
 
-        WorkTime::where('user_id', $user->id)->where('date', '2022-06-19')->update([
-            'work_end' => '14:53:55',
-        ]);
-        $this->assertDatabaseHas('work_times', [
-            'work_end' => '14:53:55',
-        ]);
+        $this->assertNotNull($work_time->work_start);
     }
 }
