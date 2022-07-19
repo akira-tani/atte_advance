@@ -1,67 +1,3 @@
-<<<<<<< HEAD
-# docker-laravel 🐳
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/35098175/145682384-0f531ede-96e0-44c3-a35e-32494bd9af42.png" alt="docker-laravel">
-</p>
-<p align="center">
-    <img src="https://github.com/ucan-lab/docker-laravel/actions/workflows/laravel-create-project.yml/badge.svg" alt="Test laravel-create-project.yml">
-    <img src="https://github.com/ucan-lab/docker-laravel/actions/workflows/laravel-git-clone.yml/badge.svg" alt="Test laravel-git-clone.yml">
-    <img src="https://img.shields.io/github/license/ucan-lab/docker-laravel" alt="License">
-</p>
-
-## Introduction
-
-Build a simple laravel development environment with docker-compose. Compatible with Windows(WSL2), macOS(M1) and Linux.
-
-## Usage
-
-1. Click [Use this template](https://github.com/ucan-lab/docker-laravel/generate)
-2. Git clone & change directory
-3. Execute the following command
-
-```bash
-$ make create-project # Install the latest Laravel project
-$ make install-recommend-packages # Optional
-```
-
-http://localhost
-
-## Tips
-
-- Read this [Makefile](https://github.com/ucan-lab/docker-laravel/blob/main/Makefile).
-- Read this [Wiki](https://github.com/ucan-lab/docker-laravel/wiki).
-
-## Container structures
-
-```bash
-├── app
-├── web
-└── db
-```
-
-### app container
-
-- Base image
-  - [php](https://hub.docker.com/_/php):8.1-fpm-bullseye
-  - [composer](https://hub.docker.com/_/composer):2.2
-
-### web container
-
-- Base image
-  - [nginx](https://hub.docker.com/_/nginx):1.22
-
-### db container
-
-- Base image
-  - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
-
-### mailhog container
-
-- Base image
-  - [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog)
-"atte-advance" 
-=======
 # Atte 勤怠管理システム
 
 ## 目次
@@ -113,6 +49,15 @@ http://localhost
 |![localhost_8000_attendance](https://user-images.githubusercontent.com/96828647/174489308-139d2b0c-25ec-44ca-9ab3-ba34f0d70259.png)|
 | ---- |
 
+### ユーザー別勤務時間表示画面
+|![localhost_8000_user](https://user-images.githubusercontent.com/96828647/179729892-6e3672d7-0008-4afa-92ea-56c8d01c8e46.png)|
+| ---- |
+
+### ユーザー別勤務時間(詳細)表示画面
+|![localhost_8000_user1](https://user-images.githubusercontent.com/96828647/179730609-6736a449-4efd-4370-ada0-846d6e84044d.png)|
+| ---- |
+
+
 ## 6.使用技術、バージョン
 * フロントエンド
   + HTML / CSS
@@ -125,6 +70,16 @@ http://localhost
   + draw.io
 
 ## 7.環境構築手順
+1. Click [Use this template](https://github.com/ucan-lab/docker-laravel/generate)
+2. Git clone & change directory
+3. Execute the following command
+
+```bash
+$ make create-project # Install the latest Laravel project
+$ make install-recommend-packages # Optional
+```
+
+http://localhost
 
 ## 8.機能一覧
 * ユーザー関連
@@ -133,7 +88,8 @@ http://localhost
   + 勤務開始・終了の打刻
   + 休憩開始・終了の打刻
 * 勤怠情報取得関連
-  + 日付別勤怠情報の表示
+  + 日付別勤怠情報の表示 
+  + ユーザー別勤怠情報の表示
 
 ## 9.DB設計
 ### ER図
@@ -143,9 +99,38 @@ http://localhost
 ![table](https://user-images.githubusercontent.com/96828647/174491848-deb58469-56df-4c75-8de3-eee863537bce.png)
 
 ### 基本設計 
-![basic_design1](https://user-images.githubusercontent.com/96828647/174492259-ece77ee8-d788-4225-bf31-a1e9ecae14a3.png)
-![basic_design2](https://user-images.githubusercontent.com/96828647/174492266-a70b55e6-3448-42a6-aa27-8cc6614112a0.png)
-![basic_design3](https://user-images.githubusercontent.com/96828647/174492269-c2c9aaeb-253a-4d9c-8ecc-f48a4df1955f.png)
+![basic_design1](https://user-images.githubusercontent.com/96828647/179731935-672d6bd0-01a1-4e9b-9310-c1c7f24994b5.png)
+![basic_design2](https://user-images.githubusercontent.com/96828647/179732041-5510b1a5-d3c8-4406-a505-5b99823353cf.png)
+![basic_design3](https://user-images.githubusercontent.com/96828647/179732118-304fd579-bf6e-4be1-97b2-98bebda91259.png)
 
 ## 10.インフラ構成図
+### Container structures
+
+```bash
+├── app
+├── web
+└── db
+```
+
+### app container
+
+- Base image
+  - [php](https://hub.docker.com/_/php):8.1-fpm-bullseye
+  - [composer](https://hub.docker.com/_/composer):2.2
+
+### web container
+
+- Base image
+  - [nginx](https://hub.docker.com/_/nginx):1.22
+
+### db container
+
+- Base image
+  - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
+
+### mailhog container
+
+- Base image
+  - [mailhog/mailhog](https://hub.docker.com/r/mailhog/mailhog)
+"atte-advance" 
 >>>>>>> origin/main
