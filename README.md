@@ -9,10 +9,10 @@
 | 4 | [目的](#4目的) |
 | 5 | [使用画面のイメージ](#5使用画面のイメージ) |
 | 6 | [使用技術、バージョン](#6使用技術バージョン) |
-| 7 | [環境構築手順（未実装）](#7環境構築手順（未実装）) |
+| 7 | [環境構築手順_未実装](#7環境構築手順_未実装) |
 | 8 | [機能一覧](#8機能一覧) |
 | 9 | [DB設計](#9db設計) |
-| 10 | [インフラ構成図（未実装）](#10インフラ構成図（未実装）) |
+| 10 | [インフラ構成図_未実装](#10インフラ構成図_未実装) |
 
 ## 1.URL
 * Herokuデプロイ_URL：
@@ -69,7 +69,7 @@
   + Visual Studio Code
   + draw.io
 
-## 7.環境構築手順（未実装）
+## 7.環境構築手順_未実装
 1. Click [Use this template](https://github.com/ucan-lab/docker-laravel/generate)
 2. Git clone & change directory
 3. Execute the following command
@@ -103,7 +103,7 @@ http://localhost
 ![basic_design2](https://user-images.githubusercontent.com/96828647/179732041-5510b1a5-d3c8-4406-a505-5b99823353cf.png)
 ![basic_design3](https://user-images.githubusercontent.com/96828647/179732118-304fd579-bf6e-4be1-97b2-98bebda91259.png)
 
-## 10.インフラ構成図(未実装)
+## 10.インフラ構成図_未実装
 ### Container structures
 
 ```bash
